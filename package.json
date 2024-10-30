@@ -1,0 +1,23 @@
+{
+  "name": "express-starter",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build:dev": "node scripts/build-watch",
+    "start:dev": "nodemon dist/www",
+    "dev": "concurrently \"npm run build:dev\" \"wait-on dist/www && DEBUG=express-starter:* npm run start:dev\""
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.12",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.8.4",
+    "concurrently": "^9.0.1",
+    "esbuild": "0.24.0",
+    "nodemon": "^3.1.7",
+    "wait-on": "^8.0.1"
+  },
+  "dependencies": {
+    "debug": "^4.3.7",
+    "express": "^4.21.1"
+  }
+}
